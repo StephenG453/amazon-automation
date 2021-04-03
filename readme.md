@@ -11,4 +11,4 @@ basic End-to-End functionality of Amazon.com
 ### Notes
 
 - This framework can easily be added into a CI/CD server like Team City or Jenkins with
-  user friendly and concise reporting
+  user friendly and concise reporting (see jenkinsFile.groovy for a working example)
