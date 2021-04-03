@@ -6,3 +6,4 @@ Feature: test End to End functionality of searching for an item validating it ap
     And user clicks the search button
     And user is at search results page
     And user clicks first item
+    And user is at search results item page
