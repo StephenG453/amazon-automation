@@ -10,3 +10,5 @@ Feature: test End to End functionality of searching for an item validating it ap
     And user validates price of a new item
     And user clicks add to cart button
     And user is at shopping cart suggestions page
+    And user validates cart subtotal
+    And user clicks proceed to checkout button

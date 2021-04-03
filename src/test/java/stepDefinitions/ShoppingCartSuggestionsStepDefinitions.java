@@ -25,4 +25,14 @@ public class ShoppingCartSuggestionsStepDefinitions extends BaseTest {
 
         Assertions.assertTrue(shoppingCartSuggestionsPage.isAtShoppingCartSuggestionsPage());
     }
+
+    @And("user validates cart subtotal")
+    public void validatePriceOfNewItem() {
+        Assertions.assertEquals("$47.49", shoppingCartSuggestionsPage.getCartSubTotal());
+    }
+
+    @And("user clicks proceed to checkout button")
+    public void clickProceedToCheckoutButton() {
+        shoppingCartSuggestionsPage.clickProceedToCheckoutButton();
+    }
 }
