@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import pages.SearchResultsPage;
 import pages.ShoppingCartSuggestionsPage;
 
-public class ShoppingCartSuggestionsStepDefinitions extends BaseTest {
+public class ShoppingCartSuggestionsStepDefinitions {
 
     private ShoppingCartSuggestionsPage shoppingCartSuggestionsPage;
 

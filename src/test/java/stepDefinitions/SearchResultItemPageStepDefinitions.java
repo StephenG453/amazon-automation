@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import pages.SearchResultItemPage;
 
-public class SearchResultItemPageStepDefinitions extends BaseTest {
+public class SearchResultItemPageStepDefinitions {
 
     private SearchResultItemPage searchResultItemPage;
 

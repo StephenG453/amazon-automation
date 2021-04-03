@@ -3,7 +3,7 @@ package stepDefinitions;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.WebDriver;
 
-public class SignInPageStepDefinitions extends BaseTest {
+public class SignInPageStepDefinitions {
 
     protected WebDriver driver;
 

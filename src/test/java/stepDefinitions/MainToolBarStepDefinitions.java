@@ -5,11 +5,9 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pages.MainToolBar;
 
-public class MainToolBarStepDefinitions extends BaseTest {
+public class MainToolBarStepDefinitions {
 
     private MainToolBar mainToolBar;
-
-//    private BaseTest baseTest;
 
     private Injector injector;
 
