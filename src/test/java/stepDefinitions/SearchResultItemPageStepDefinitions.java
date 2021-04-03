@@ -4,7 +4,6 @@ import cucumber.api.java.en.And;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import pages.SearchResultItemPage;
-import pages.SearchResultsPage;
 
 public class SearchResultItemPageStepDefinitions extends BaseTest {
 
@@ -29,5 +28,10 @@ public class SearchResultItemPageStepDefinitions extends BaseTest {
     @And("user validates price of a new item")
     public void validatePriceOfNewItem() {
         Assertions.assertEquals("$47.49", searchResultItemPage.getPriceOfNewItem());
+    }
+
+    @And("user clicks add to cart button")
+    public void clickAddToCartButton() {
+        searchResultItemPage.clickAddToCartButton();
     }
 }

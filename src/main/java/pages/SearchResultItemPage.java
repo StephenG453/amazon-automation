@@ -6,14 +6,14 @@ import org.openqa.selenium.support.FindBy;
 
 public class SearchResultItemPage extends BasePage {
 
-//    private WebDriver driver;
-
     @FindBy(id = "newBuyBoxPrice")
     private WebElement newItemPrice;
 
+    @FindBy(id = "add-to-cart-button")
+    private WebElement addToCartButton;
+
     public SearchResultItemPage(WebDriver driver) {
         super(driver);
-//        this.driver = driver;
     }
 
     public boolean isAtSearchResultItemPage() {
@@ -22,5 +22,9 @@ public class SearchResultItemPage extends BasePage {
 
     public String getPriceOfNewItem() {
         return newItemPrice.getText();
+    }
+
+    public void clickAddToCartButton() {
+        addToCartButton.click();
     }
 }
