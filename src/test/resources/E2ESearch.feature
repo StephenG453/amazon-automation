@@ -2,3 +2,5 @@ Feature: test End to End functionality of searching for an item validating it ap
 
   Scenario: happy path verification that the user can search for a book and add to the cart
     Given user loads amazon home page
+    When user inputs text into the search bar
+    And user clicks the search button

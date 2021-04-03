@@ -14,13 +14,11 @@ public class HomePageStepDefinitions extends BaseTest {
     private HomePage homePage;
 
     @Given("user loads amazon home page")
-    public void loadHomePage() throws InterruptedException {
+    public void loadHomePage() {
         baseTest = new BaseTest();
         baseTest.initialize();
         driver = baseTest.driver;
 
         homePage = new HomePage(driver);
-
-        Thread.sleep(5000);
     }
 }
