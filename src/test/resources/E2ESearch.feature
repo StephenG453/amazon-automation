@@ -1,6 +1,6 @@
-Feature: test End to End functionality of searching for an item validating it appears in the cart
+Feature: test End to End functionality of searching for an item, adding into the cart, and checking out
 
-  Scenario: happy path verification that the user can search for a book and add to the cart
+  Scenario: End to End happy path verification that the user can search for a book, add to the cart, and checkout
     Given user loads amazon home page
     When user inputs "qa testing for beginners" into the search bar
     And user clicks the search button
