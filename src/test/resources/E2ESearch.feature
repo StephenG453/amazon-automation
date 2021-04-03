@@ -12,3 +12,4 @@ Feature: test End to End functionality of searching for an item validating it ap
     And user is at shopping cart suggestions page
     And user validates cart subtotal
     And user clicks proceed to checkout button
+    Then sign in page is displayed

@@ -1,5 +1,10 @@
 package stepDefinitions;
 
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,8 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
-    public WebDriver driver;
-//    public HomePage homePage;
+    private WebDriver driver;
 
     public void initialize() {
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -24,25 +28,18 @@ public class BaseTest {
         driver = new ChromeDriver(chromeOptions);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-
-//        homePage = new HomePage(driver);
     }
-
-    //    void waitForElementClickable(WebElement element) {
-//        WebDriverWait wait = new WebDriverWait(driver, 15);
-//        wait.until(ExpectedConditions.elementToBeClickable(element));
-//    }
-//
-//    void turnOffImplicitWait(){
-//        driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-//    }
-//
-//    void turnOnImplicitWait(){
-//        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-//    }
 
     public void cleanUp() {
         driver.close();
         driver.quit();
+    }
+
+    public void setDriver(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public WebDriver getDriver() {
+        return driver;
     }
 }

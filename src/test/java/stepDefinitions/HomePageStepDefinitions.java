@@ -22,7 +22,7 @@ public class HomePageStepDefinitions extends BaseTest {
     public void loadHomePage() {
         baseTest = new BaseTest();
         baseTest.initialize();
-        driver = baseTest.driver;
+        driver = baseTest.getDriver();
 
         injector.setDriver(driver);
         homePage = new HomePage(driver);
