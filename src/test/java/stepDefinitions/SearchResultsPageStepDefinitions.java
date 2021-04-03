@@ -24,4 +24,9 @@ public class SearchResultsPageStepDefinitions extends BaseTest {
 
         Assertions.assertTrue(searchResultsPage.isAtResultsPage());
     }
+
+    @And("user clicks first item")
+    public void clickFirstResult() {
+        searchResultsPage.clickFirstItem();
+    }
 }
