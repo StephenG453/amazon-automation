@@ -1,7 +1,7 @@
 package stepDefinitions;
 
 import cucumber.api.java.en.And;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.SearchResultItemPage;
 
@@ -22,12 +22,14 @@ public class SearchResultItemPageStepDefinitions {
         driver = injector.getDriver();
         searchResultItemPage = new SearchResultItemPage(driver);
 
-        Assertions.assertTrue(searchResultItemPage.isAtSearchResultItemPage());
+        Assert.assertTrue(searchResultItemPage.isAtSearchResultItemPage());
     }
 
     @And("user validates price of a new item")
     public void validatePriceOfNewItem() {
-        Assertions.assertEquals("$47.49", searchResultItemPage.getPriceOfNewItem());
+//        Assertions.assertEquals("$47.49", searchResultItemPage.getPriceOfNewItem());
+
+        Assert.assertEquals("$47.49", searchResultItemPage.getPriceOfNewItem());
     }
 
     @And("user clicks add to cart button")

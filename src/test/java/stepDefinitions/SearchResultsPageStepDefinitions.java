@@ -1,7 +1,7 @@
 package stepDefinitions;
 
 import cucumber.api.java.en.And;
-import org.junit.jupiter.api.Assertions;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pages.SearchResultsPage;
 
@@ -22,7 +22,7 @@ public class SearchResultsPageStepDefinitions {
         driver = injector.getDriver();
         searchResultsPage = new SearchResultsPage(driver);
 
-        Assertions.assertTrue(searchResultsPage.isAtResultsPage());
+        Assert.assertTrue(searchResultsPage.isAtResultsPage());
     }
 
     @And("user clicks first item")
