@@ -25,4 +25,9 @@ public class SearchResultItemPageStepDefinitions extends BaseTest {
 
         Assertions.assertTrue(searchResultItemPage.isAtSearchResultItemPage());
     }
+
+    @And("user validates price of a new item")
+    public void validatePriceOfNewItem() {
+        Assertions.assertEquals("$47.49", searchResultItemPage.getPriceOfNewItem());
+    }
 }

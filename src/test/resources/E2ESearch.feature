@@ -7,3 +7,4 @@ Feature: test End to End functionality of searching for an item validating it ap
     And user is at search results page
     And user clicks first item
     And user is at search results item page
+    And user validates price of a new item
