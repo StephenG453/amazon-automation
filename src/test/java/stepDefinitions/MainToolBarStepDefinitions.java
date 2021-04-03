@@ -17,16 +17,17 @@ public class MainToolBarStepDefinitions {
         this.injector = injector;
     }
 
-    @When("user inputs text into the search bar")
-    public void inputTextIntoSearchBar() {
+    @When("user inputs {string} into the search bar")
+    public void inputTextIntoSearchBar(String text) {
         driver = injector.getDriver();
 
         mainToolBar = new MainToolBar(driver);
-        mainToolBar.inputTextIntoTextBox("qa testing for beginners");
+        mainToolBar.inputTextIntoTextBox(text);
     }
 
     @And("user clicks the search button")
     public void clickSearchButton() {
         mainToolBar.clickSearchButton();
     }
+
 }

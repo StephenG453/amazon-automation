@@ -25,9 +25,9 @@ public class ShoppingCartSuggestionsStepDefinitions {
         Assert.assertTrue(shoppingCartSuggestionsPage.isAtShoppingCartSuggestionsPage());
     }
 
-    @And("user validates cart subtotal")
-    public void validatePriceOfNewItem() {
-        Assert.assertEquals("$47.49", shoppingCartSuggestionsPage.getCartSubTotal());
+    @And("user validates cart subtotal is {string}")
+    public void validatePriceOfNewItem(String text) {
+        Assert.assertEquals(text, shoppingCartSuggestionsPage.getCartSubTotal());
     }
 
     @And("user clicks proceed to checkout button")

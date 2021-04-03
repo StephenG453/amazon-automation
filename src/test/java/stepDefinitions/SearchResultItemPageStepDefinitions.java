@@ -25,11 +25,9 @@ public class SearchResultItemPageStepDefinitions {
         Assert.assertTrue(searchResultItemPage.isAtSearchResultItemPage());
     }
 
-    @And("user validates price of a new item")
-    public void validatePriceOfNewItem() {
-//        Assertions.assertEquals("$47.49", searchResultItemPage.getPriceOfNewItem());
-
-        Assert.assertEquals("$47.49", searchResultItemPage.getPriceOfNewItem());
+    @And("user validates price of a new item is {string}")
+    public void validatePriceOfNewItem(String text) {
+        Assert.assertEquals(text, searchResultItemPage.getPriceOfNewItem());
     }
 
     @And("user clicks add to cart button")
